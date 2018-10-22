@@ -58,5 +58,3 @@ poc：
 
 
 
-
-#### Vulnerabilities are owned by Patec HanGuang Lab
